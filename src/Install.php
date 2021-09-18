@@ -1,7 +1,7 @@
 <?php
 
-namespace CH;
-use CH\Config;
+namespace GKLSMP;
+use GKLSMP\Config;
 class Install
 {
     /*
@@ -54,7 +54,7 @@ class Install
         {
              if($wpdb->get_var("SHOW TABLES LIKE '{$sql['table']}'") != $sql['table'])
              {
-                $query="CREATE TABLE IF NOT EXISTS {$sql['table']} ( {$sql['query']} ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;";
+                $query="CREATE TABLE IF NOT EXISTS {$sql['table']} ( {$sql['query']} ) ENGINE=InnoDB DEFAULT GKLSMPARSET=latin1 AUTO_INCREMENT=1 ;";
                 $wpdb->query($sql['query']);
              }
         }

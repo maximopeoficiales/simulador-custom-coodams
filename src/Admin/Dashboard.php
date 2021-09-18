@@ -1,7 +1,7 @@
 <?php 
-namespace CH\Admin;
+namespace GKLSMP\Admin;
 
-use CH\Config;
+use GKLSMP\Config;
 
 class Dashboard
 {

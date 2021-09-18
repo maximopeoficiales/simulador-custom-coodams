@@ -1,6 +1,6 @@
 <?php
 
-namespace CH;
+namespace GKLSMP;
 
 class Config
 {
@@ -26,40 +26,40 @@ class Config
     /**
     * POST data process
     * get the post data and execute the function
-    * @example ['post_data'=>'CH::function']
+    * @example ['post_data'=>'GKLSMP::function']
     */
     public $post=[
     ];
     /**
     * GET data process
     * get the get data and execute the function
-    * @example ['get_data'=>'CH::function']
+    * @example ['get_data'=>'GKLSMP::function']
     */
     public $get=[
     ];
     /**
     * add_filter data functions
     * @input array
-    * @example ['body_class','CH::function',10,2]
-    * @example ['body_class',['CH','function'],10,2]
+    * @example ['body_class','GKLSMP::function',10,2]
+    * @example ['body_class',['GKLSMP','function'],10,2]
     */
     public $add_filter=[
     ];
     /**
     * add_action data functions
     * @input array
-    * @example ['body_class','CH::function',10,2]
-    * @example ['body_class',['CH','function'],10,2]
+    * @example ['body_class','GKLSMP::function',10,2]
+    * @example ['body_class',['GKLSMP','function'],10,2]
     */
     public $add_action=[
     ];
     /**
     * add custom shortcodes
     * @input array
-    * @example [['example','CH\ExampleController::example_shortcode']]
+    * @example [['example','GKLSMP\ExampleController::example_shortcode']]
     */
     public $shortcodes=[
-        ['example','CH\ExampleController::example_shortcode']
+        ['example','GKLSMP\ExampleController::example_shortcode']
     ];
     /**
      * add Gutenberg's blocks

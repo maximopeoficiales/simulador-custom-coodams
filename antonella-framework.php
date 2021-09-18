@@ -1,5 +1,5 @@
 <?php
-namespace CH;
+namespace GKLSMP;
 /*
 Plugin Name: Antonella Framework
 Plugin URI:

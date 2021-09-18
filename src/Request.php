@@ -2,8 +2,8 @@
 /**
 * No modify this file !!!
 */
-namespace CH;
-use CH\Config;
+namespace GKLSMP;
+use GKLSMP\Config;
 
 class Request
 {

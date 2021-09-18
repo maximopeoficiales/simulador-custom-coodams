@@ -1,5 +1,5 @@
 <?php
-namespace CH;
+namespace GKLSMP;
 
 class Init
 {

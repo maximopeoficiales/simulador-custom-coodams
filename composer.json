@@ -26,12 +26,14 @@
     ],
     "license": "MIT",
     "require": {
+        "jenssegers/blade": "^1.4"
     },
     "require-dev":{
-        "vlucas/phpdotenv":"^3.5"
+        "vlucas/phpdotenv":"^3.5",
+        "symfony/var-dumper": "^5.3"
     },
     "autoload": {
-        "psr-4": {"CH\\": "src/"},
+        "psr-4": {"GKLSMP\\": "src/"},
         "files": [
             "src/helpers.php"
         ]

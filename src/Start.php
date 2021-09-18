@@ -2,11 +2,11 @@
 /**
 * No modify this file !!!
 */
-namespace CH;
+namespace GKLSMP;
 
 /*
 * Class Start
-* @package CH\Start
+* @package GKLSMP\Start
 */
 class Start
 {

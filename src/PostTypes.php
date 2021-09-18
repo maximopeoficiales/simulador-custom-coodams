@@ -1,6 +1,6 @@
 <?php
-namespace CH;
-use CH\Config;
+namespace GKLSMP;
+use GKLSMP\Config;
 class PostTypes
 {
   public static function index()
