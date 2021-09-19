@@ -65,7 +65,7 @@ class Config
      * @example [['example','GKLSMP\ExampleController::example_shortcode']]
      */
     public $shortcodes = [
-        ['example', 'GKLSMP\ExampleController::example_shortcode']
+        ['simulador_custom',  __NAMESPACE__ . '\ShortcodeController::index']
     ];
     /**
      * add Gutenberg's blocks
