@@ -58,8 +58,7 @@ class Config
      */
     public $add_action = [
         ['admin_enqueue_scripts', __NAMESPACE__ . '\AdminController::loadAdminStyle'],
-        ["wp_ajax_options_simulator", __NAMESPACE__ . '\AdminController::ajaxGetOptions'],
-        ["wp_ajax_nopriv_options_simulator", __NAMESPACE__ . '\AdminController::ajaxGetOptions'],
+        ["rest_api_init", __NAMESPACE__ . '\AdminController::jsonGetOptions'],
 
     ];
     /**

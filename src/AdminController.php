@@ -25,22 +25,22 @@ class AdminController
     }
 
 
-    public static function ajaxGetOptions()
+    public static function jsonGetOptions()
     {
-        try {
-            $object = [
-                "tasa_libre_inversion" => get_option('tasa_libre_inversion'),
-                "tasa_vivienda" => get_option('tasa_vivienda'),
-                "tasa_vehiculo_1" => get_option('tasa_vehiculo_1'),
-                "tasa_vehiculo_2" => get_option('tasa_vehiculo_2'),
-                "tasa_vehiculo_3" => get_option('tasa_vehiculo_3'),
-            ];
-            $json = json_encode($object);
-            // wp_send_json($json);
-            echo $json;
-        } catch (\Throwable $th) {
-            echo $th;
-        }
+        // http://localhost/wp-json/simulador/v1/getOptions
+        register_rest_route('simulador/v1', '/getOptions', array(
+            'methods' => 'GET',
+            'callback' => function () {
+                $object = [
+                    "tasa_libre_inversion" => get_option('tasa_libre_inversion'),
+                    "tasa_vivienda" => get_option('tasa_vivienda'),
+                    "tasa_vehiculo_1" => get_option('tasa_vehiculo_1'),
+                    "tasa_vehiculo_2" => get_option('tasa_vehiculo_2'),
+                    "tasa_vehiculo_3" => get_option('tasa_vehiculo_3'),
+                ];
+                return $object;
+            },
+        ));
     }
     public static function loadAdminStyle()
     {
