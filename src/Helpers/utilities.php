@@ -16,3 +16,8 @@ function path($path = ""): string
 {
     return plugin_dir_path(dirname(dirname(__FILE__))) . $path;
 }
+
+function assetCss(string $fileCss): string
+{
+    return plugin_dir_url(dirname(dirname(__FILE__))) . "assets/css/$fileCss";
+}

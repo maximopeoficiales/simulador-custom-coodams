@@ -1,11 +1,12 @@
 <?php
+
 namespace GKLSMP;
 /*
-Plugin Name: Antonella Framework
-Plugin URI:
-Description:Another plugin developed on Antonella Framework for WP
-Version: 1.7
-Author: Carlos Herrera
+Plugin Name: Simulador Custom
+Plugin URI: 
+Description: Simulador para la empresa Cali
+Version: 1.0.0
+Author: Maximo Junior Apaza Chirhuana
 Author URI:
 Framework: Antonella Framework for WP
 Framework URI: http://antonellaframework.com
@@ -14,7 +15,7 @@ Text Domain: Carlos Herrera
 Domain Path: /languages
 */
 
-defined( 'ABSPATH' ) or die( __('Lo siento por aqui no puedes pasar :)') );
+defined('ABSPATH') or die(__('Lo siento por aqui no puedes pasar :)'));
 
 /*
 * Class Caller.
@@ -24,9 +25,6 @@ defined( 'ABSPATH' ) or die( __('Lo siento por aqui no puedes pasar :)') );
 *
 * @return null
 */
-define('NELLA_URL',__FILE__);
+define('NELLA_URL', __FILE__);
 $loader = require __DIR__ . '/vendor/autoload.php';
-$antonella= new Start;
-
-
-?>
+$antonella = new Start;

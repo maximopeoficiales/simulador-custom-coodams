@@ -4,7 +4,7 @@ namespace GKLSMP;
 
 class Config
 {
-   
+
     /*
     * Plugins option
     * storage in database the option value
@@ -12,148 +12,152 @@ class Config
     * @example ["example_data" => 'foo',]
     * @return void
     */
-    public $plugin_options=[];
-    /**
-    * Language Option
-    * define a unique word for translate call
-    */
-    public $language_name='antonella';
-    /**
-    * Plugin text prefix
-    * define a unique word for this plugin
-    */
-    public $plugin_prefix='ch_nella';
-    /**
-    * POST data process
-    * get the post data and execute the function
-    * @example ['post_data'=>'GKLSMP::function']
-    */
-    public $post=[
+    public $plugin_options = [
+        'tasa_libre_inversion' => '1.6',
+        'tasa_vivienda' => '1.3',
+        'tasa_vehiculo_1' => '1.3',
+        'tasa_vehiculo_2' => '1.2',
+        'tasa_vehiculo_3' => '1.1',
     ];
     /**
-    * GET data process
-    * get the get data and execute the function
-    * @example ['get_data'=>'GKLSMP::function']
-    */
-    public $get=[
+     * Language Option
+     * define a unique word for translate call
+     */
+    public $language_name = 'antonella_simulador';
+    /**
+     * Plugin text prefix
+     * define a unique word for this plugin
+     */
+    public $plugin_prefix = 'ch_nella_simulador';
+    /**
+     * POST data process
+     * get the post data and execute the function
+     * @example ['post_data'=>'GKLSMP::function']
+     */
+    public $post = [
+        "updateOptionsSimulador" => __NAMESPACE__ . '\AdminController::saveOptions'
     ];
     /**
-    * add_filter data functions
-    * @input array
-    * @example ['body_class','GKLSMP::function',10,2]
-    * @example ['body_class',['GKLSMP','function'],10,2]
-    */
-    public $add_filter=[
+     * GET data process
+     * get the get data and execute the function
+     * @example ['get_data'=>'GKLSMP::function']
+     */
+    public $get = [];
+    /**
+     * add_filter data functions
+     * @input array
+     * @example ['body_class','GKLSMP::function',10,2]
+     * @example ['body_class',['GKLSMP','function'],10,2]
+     */
+    public $add_filter = [];
+    /**
+     * add_action data functions
+     * @input array
+     * @example ['body_class','GKLSMP::function',10,2]
+     * @example ['body_class',['GKLSMP','function'],10,2]
+     */
+    public $add_action = [
+        ['admin_enqueue_scripts', __NAMESPACE__ . '\AdminController::loadAdminStyle'],
     ];
     /**
-    * add_action data functions
-    * @input array
-    * @example ['body_class','GKLSMP::function',10,2]
-    * @example ['body_class',['GKLSMP','function'],10,2]
-    */
-    public $add_action=[
-    ];
-    /**
-    * add custom shortcodes
-    * @input array
-    * @example [['example','GKLSMP\ExampleController::example_shortcode']]
-    */
-    public $shortcodes=[
-        ['example','GKLSMP\ExampleController::example_shortcode']
+     * add custom shortcodes
+     * @input array
+     * @example [['example','GKLSMP\ExampleController::example_shortcode']]
+     */
+    public $shortcodes = [
+        ['example', 'GKLSMP\ExampleController::example_shortcode']
     ];
     /**
      * add Gutenberg's blocks
      */
-    public $gutenberg_blocks =[
-    ];
+    public $gutenberg_blocks = [];
     /**
-    * Dashboard
+     * Dashboard
 
-    * @reference: https://codex.wordpress.org/Function_Reference/wp_add_dashboard_widget
-    */
-    public $dashboard=[
+     * @reference: https://codex.wordpress.org/Function_Reference/wp_add_dashboard_widget
+     */
+    public $dashboard = [
         [
-        'slug'      => '',
-        'name'      => '',
-        'function'  => '', // example: __NAMESPACE__.'\Admin\PageAdmin::DashboardExample',
-        'callback'  => '',
-        'args'      => '',
+            'slug'      => '',
+            'name'      => '',
+            'function'  => '', // example: __NAMESPACE__.'\Admin\PageAdmin::DashboardExample',
+            'callback'  => '',
+            'args'      => '',
         ]
 
     ];
     /**
-    * Files for use in Dashboard
-    */
-    public $files_dashboard=[];
+     * Files for use in Dashboard
+     */
+    public $files_dashboard = [];
 
     /*
     * Plugin menu
     * set your menu option here
     */
-    public $plugin_menu=[
-    /*
+    public $plugin_menu = [
+
         [
             "path"      => ["page"],
-            "name"      => "My Custom Page",
-            "function"  => __NAMESPACE__."\Admin\PageAdmin::index",
-            "icon"      => "antonella-icon.png",
-            "slug"      => "my-custom-page",
-        ]
-        
-            [
-                "path"      => ["page"],
-                "name"      => "My Custom Page",
-                "function"  => __NAMESPACE__."\Admin::option_page",
-               // "icon"      => "antonella-icon.png",
-                "slug"      => "my-custom-page",
-                "subpages"  =>
-                [
-                    [
-                        "name"      => "My Custom sub Page",
-                        "slug"      => "my-top-sub-level-slug",
-                        "function"  => __NAMESPACE__."\Admin::option_page",
-                    ],
-                    [
-                        "name"      => "My  Sencond Custom sub Page",
-                        "slug"      => "my-second-sub-level-slug",
-                        "function"  => __NAMESPACE__."\Admin::option_page",
-                    ],
-                ]
-            ],
-            [
-                "path"      => ["page"],
-                "name"      => "My SECOND Custom Page",
-                "function"  => __NAMESPACE__."\Admin::option_page",
-                "icon"      => "antonella-icon.png",
-                "slug"      => "my-SECOND-custom-page",
-                "subpages"  =>
-                [
-                    [
-                        "name"      => "My Custom sub Page",
-                        "slug"      => "my-top-sub-level-slug-2",
-                        "function"  => __NAMESPACE__."\Admin::option_page",
-                    ],
-                    [
-                        "name"      => "My  Sencond Custom sub Page",
-                        "slug"      => "my-second-sub-level-slug-2",
-                        "function"  => __NAMESPACE__."\Admin::option_page",
-                    ],
-                ]
-            ],
-            [
-                "path"      => ["subpage","tools.php"],
-                "name"      => "sub page in tools",
-                "slug"      => "sub-tools",
-                "function"  => __NAMESPACE__."\Admin::option_page",
-            ],
-            [
-                "path"      => ["option"],
-                "name"      => "sub page in option",
-                "slug"      => "sub-option",
-                "function"  => __NAMESPACE__."\Admin::option_page",
-            ]
-        */
-        ];
+            "name"      => "Simulador Tasas",
+            "function"  => __NAMESPACE__ . "\AdminController::index",
+            "icon"      => "impuestos.png",
+            "slug"      => "simulador-tasas",
+        ],
+
+        // [
+        //     "path"      => ["page"],
+        //     "name"      => "My Custom Page",
+        //     "function"  => __NAMESPACE__ . "\Admin::option_page",
+        //     // "icon"      => "antonella-icon.png",
+        //     "slug"      => "my-custom-page",
+        //     "subpages"  =>
+        //     [
+        //         [
+        //             "name"      => "My Custom sub Page",
+        //             "slug"      => "my-top-sub-level-slug",
+        //             "function"  => __NAMESPACE__ . "\Admin::option_page",
+        //         ],
+        //         [
+        //             "name"      => "My  Sencond Custom sub Page",
+        //             "slug"      => "my-second-sub-level-slug",
+        //             "function"  => __NAMESPACE__ . "\Admin::option_page",
+        //         ],
+        //     ]
+        // ],
+        // [
+        //     "path"      => ["page"],
+        //     "name"      => "My SECOND Custom Page",
+        //     "function"  => __NAMESPACE__ . "\Admin::option_page",
+        //     "icon"      => "antonella-icon.png",
+        //     "slug"      => "my-SECOND-custom-page",
+        //     "subpages"  =>
+        //     [
+        //         [
+        //             "name"      => "My Custom sub Page",
+        //             "slug"      => "my-top-sub-level-slug-2",
+        //             "function"  => __NAMESPACE__ . "\Admin::option_page",
+        //         ],
+        //         [
+        //             "name"      => "My  Sencond Custom sub Page",
+        //             "slug"      => "my-second-sub-level-slug-2",
+        //             "function"  => __NAMESPACE__ . "\Admin::option_page",
+        //         ],
+        //     ]
+        // ],
+        // [
+        //     "path"      => ["subpage", "tools.php"],
+        //     "name"      => "sub page in tools",
+        //     "slug"      => "sub-tools",
+        //     "function"  => __NAMESPACE__ . "\Admin::option_page",
+        // ],
+        // [
+        //     "path"      => ["option"],
+        //     "name"      => "sub page in option",
+        //     "slug"      => "sub-option",
+        //     "function"  => __NAMESPACE__ . "\Admin::option_page",
+        // ]
+    ];
 
     /**
      * Custom Post Type
@@ -163,7 +167,7 @@ class Config
      * https://codex.wordpress.org/Function_Reference/register_post_type
      */
 
-    public $post_types =[
+    public $post_types = [
         [
             "singular"      => "",
             "plural"        => "",
@@ -180,7 +184,7 @@ class Config
             */
         ],
     ];
-    
+
     /**
      * Taxonomies
      * for make taxonomies
@@ -202,9 +206,9 @@ class Config
             "rewrite"       =>[],
             "capabilities"  =>[]
             */
-        ] 
+        ]
     ];
-    
+
     /**
      * Widget
      * For register a Widget please:
@@ -212,6 +216,5 @@ class Config
      * @input array
      * @example public $widget = [__NAMESPACE__.'\YouClassWidget']  //only the class
      */
-    public $widgets=[];
-    
+    public $widgets = [];
 }
