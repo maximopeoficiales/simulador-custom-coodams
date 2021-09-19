@@ -2,6 +2,8 @@
 
 namespace GKLSMP;
 
+use stdClass;
+
 class AdminController
 {
 
@@ -20,6 +22,25 @@ class AdminController
         update_option('tasa_vehiculo_1', $_POST['tasa_vehiculo_1']);
         update_option('tasa_vehiculo_2', $_POST['tasa_vehiculo_2']);
         update_option('tasa_vehiculo_3', $_POST['tasa_vehiculo_3']);
+    }
+
+
+    public static function ajaxGetOptions()
+    {
+        try {
+            $object = [
+                "tasa_libre_inversion" => get_option('tasa_libre_inversion'),
+                "tasa_vivienda" => get_option('tasa_vivienda'),
+                "tasa_vehiculo_1" => get_option('tasa_vehiculo_1'),
+                "tasa_vehiculo_2" => get_option('tasa_vehiculo_2'),
+                "tasa_vehiculo_3" => get_option('tasa_vehiculo_3'),
+            ];
+            $json = json_encode($object);
+            // wp_send_json($json);
+            echo $json;
+        } catch (\Throwable $th) {
+            echo $th;
+        }
     }
     public static function loadAdminStyle()
     {

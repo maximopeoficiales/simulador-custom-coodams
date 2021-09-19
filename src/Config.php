@@ -58,6 +58,9 @@ class Config
      */
     public $add_action = [
         ['admin_enqueue_scripts', __NAMESPACE__ . '\AdminController::loadAdminStyle'],
+        ["wp_ajax_options_simulator", __NAMESPACE__ . '\AdminController::ajaxGetOptions'],
+        ["wp_ajax_nopriv_options_simulator", __NAMESPACE__ . '\AdminController::ajaxGetOptions'],
+
     ];
     /**
      * add custom shortcodes

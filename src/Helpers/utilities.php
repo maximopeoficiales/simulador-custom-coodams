@@ -21,3 +21,20 @@ function assetCss(string $fileCss): string
 {
     return plugin_dir_url(dirname(dirname(__FILE__))) . "assets/css/$fileCss";
 }
+function assetStaticReact(string $file): string
+{
+    return plugin_dir_url(dirname(dirname(__FILE__))) . "assets/build/static/$file";
+}
+
+function assetStaticCSSReact(string $file): string
+{
+    return plugin_dir_url(dirname(dirname(__FILE__))) . "assets/build/static/css/$file";
+}
+function assetStaticJSReact(string $file): string
+{
+    return plugin_dir_url(dirname(dirname(__FILE__))) . "assets/build/static/js/$file";
+}
+function assetBuildReact(string $file): string
+{
+    return plugin_dir_url(dirname(dirname(__FILE__))) . "assets/build/$file";
+}
