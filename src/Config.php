@@ -13,6 +13,9 @@ class Config
     * @return void
     */
     public $plugin_options = [
+        'sim_libre_inversion' => 1,
+        'sim_vivienda' => 1,
+        'sim_vehiculo' => 1,
         'tasa_libre_inversion' => '1.6',
         'tasa_vivienda' => '1.3',
         'tasa_vehiculo_1' => '1.3',
