@@ -1,0 +1,2 @@
+<!-- <h1>simuladoorr</h1> -->
+<div id="root-simulador"></div><?php /**PATH /home/customer/www/cooadams.com.co/public_html/test/wp-content/plugins/simulador-custom/resources/views/shortcode.blade.php ENDPATH**/ ?>

@@ -53,4 +53,4 @@
     </div>
     <button type="submit" class="button blue">Guardar Cambios</button>
 </form>
-<?php /**PATH /var/www/html/wp-content/plugins/simulador-custom/resources/views/adminPage.blade.php ENDPATH**/ ?>
+<?php /**PATH /home/customer/www/cooadams.com.co/public_html/test/wp-content/plugins/simulador-custom/resources/views/adminPage.blade.php ENDPATH**/ ?>
