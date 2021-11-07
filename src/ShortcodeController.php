@@ -14,7 +14,7 @@ class ShortcodeController
 
         wp_enqueue_script('chuck_js_base', asset('/js/base.js'), '', '1.0.0', true);
         wp_enqueue_script('chuck_js_react_1', assetStaticJSReact('2.4eca5775.chunk.js'), '', '1.0.0', true);
-        wp_enqueue_script('chuck_js_react_2', assetStaticJSReact('main.164d246e.chunk.js'), '', '1.0.0', true);
+        wp_enqueue_script('chuck_js_react_2', assetStaticJSReact('main.a15c7406.chunk.js'), '', '1.0.0', true);
 
         return view("shortcode", []);
     }
