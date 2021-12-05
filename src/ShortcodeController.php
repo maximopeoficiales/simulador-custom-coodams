@@ -17,7 +17,7 @@ class ShortcodeController
         wp_enqueue_script('chuck_js_react_2', assetStaticJSReact('main.a15c7406.chunk.js'), '', '1.0.0', true);
 
         return view("shortcode", [
-            'show_only' => $params['show_only']
+            'show_only' => $params['show_only'] ?? 0
         ]);
     }
 }
