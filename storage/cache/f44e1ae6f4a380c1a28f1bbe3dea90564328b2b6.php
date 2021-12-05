@@ -1,0 +1,2 @@
+<!-- <h1>simuladoorr</h1> -->
+<div id="root-simulador"></div><?php /**PATH /home/customer/www/staging7.cooadams.com.co/public_html/wp-content/plugins/simulador-custom/resources/views/shortcode.blade.php ENDPATH**/ ?>
