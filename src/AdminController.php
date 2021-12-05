@@ -26,6 +26,10 @@ class AdminController
         update_option('sim_vehiculo', $_POST['sim_vehiculo'] ?? 0);
         update_option('sim_vivienda', $_POST['sim_vivienda'] ?? 0);
         update_option('sim_libre_inversion', $_POST['sim_libre_inversion'] ?? 0);
+
+        update_option('monto_max_libre_inversion', $_POST['monto_max_libre_inversion'] ?? 0);
+        update_option('monto_max_vivienda', $_POST['monto_max_vivienda'] ?? 0);
+        update_option('monto_max_vehiculo', $_POST['monto_max_vehiculo'] ?? 0);
     }
 
 
@@ -36,15 +40,19 @@ class AdminController
             'methods' => 'GET',
             'callback' => function () {
                 $object = [
-                    "tasa_libre_inversion" => get_option('tasa_libre_inversion'),
-                    "tasa_vivienda" => get_option('tasa_vivienda'),
-                    "tasa_vehiculo_1" => get_option('tasa_vehiculo_1'),
-                    "tasa_vehiculo_2" => get_option('tasa_vehiculo_2'),
-                    "tasa_vehiculo_3" => get_option('tasa_vehiculo_3'),
+                    "tasa_libre_inversion" => floatval(get_option('tasa_libre_inversion')),
+                    "tasa_vivienda" => floatval(get_option('tasa_vivienda')),
+                    "tasa_vehiculo_1" => floatval(get_option('tasa_vehiculo_1')),
+                    "tasa_vehiculo_2" => floatval(get_option('tasa_vehiculo_2')),
+                    "tasa_vehiculo_3" => floatval(get_option('tasa_vehiculo_3')),
 
-                    "sim_libre_inversion" => get_option('sim_libre_inversion'),
-                    "sim_vivienda" => get_option('sim_vivienda'),
-                    "sim_vehiculo" => get_option('sim_vehiculo'),
+                    "sim_libre_inversion" => boolval(get_option('sim_libre_inversion')),
+                    "sim_vivienda" => boolval(get_option('sim_vivienda')),
+                    "sim_vehiculo" => boolval(get_option('sim_vehiculo')),
+
+                    "monto_max_libre_inversion" => intval(get_option('monto_max_libre_inversion')),
+                    "monto_max_vivienda" => intval(get_option('monto_max_vivienda')),
+                    "monto_max_vehiculo" => intval(get_option('monto_max_vehiculo')),
                 ];
                 return $object;
             },

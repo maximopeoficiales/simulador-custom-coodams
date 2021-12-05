@@ -21,6 +21,9 @@ class Config
         'tasa_vehiculo_1' => '1.3',
         'tasa_vehiculo_2' => '1.2',
         'tasa_vehiculo_3' => '1.1',
+        'monto_max_libre_inversion' => '5269451',
+        'monto_max_vivienda' => '181705200',
+        'monto_max_vehiculo' => '45426300',
     ];
     /**
      * Language Option
