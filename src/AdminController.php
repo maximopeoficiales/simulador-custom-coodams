@@ -45,14 +45,17 @@ class AdminController
                     "tasa_vehiculo_1" => floatval(get_option('tasa_vehiculo_1')),
                     "tasa_vehiculo_2" => floatval(get_option('tasa_vehiculo_2')),
                     "tasa_vehiculo_3" => floatval(get_option('tasa_vehiculo_3')),
+                    "tasa_plan_credito" => floatval(get_option('tasa_plan_credito')),
 
                     "sim_libre_inversion" => boolval(get_option('sim_libre_inversion')),
                     "sim_vivienda" => boolval(get_option('sim_vivienda')),
                     "sim_vehiculo" => boolval(get_option('sim_vehiculo')),
+                    "sim_plan_credito" => boolval(get_option('sim_plan_credito')),
 
                     "monto_max_libre_inversion" => intval(get_option('monto_max_libre_inversion')),
                     "monto_max_vivienda" => intval(get_option('monto_max_vivienda')),
                     "monto_max_vehiculo" => intval(get_option('monto_max_vehiculo')),
+                    "monto_max_plan_credito" => intval(get_option('monto_max_plan_credito')),
                 ];
                 return $object;
             },

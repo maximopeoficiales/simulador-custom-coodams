@@ -16,14 +16,17 @@ class Config
         'sim_libre_inversion' => 1,
         'sim_vivienda' => 1,
         'sim_vehiculo' => 1,
+        'sim_plan_credito' => 1,
         'tasa_libre_inversion' => '1.6',
         'tasa_vivienda' => '1.3',
         'tasa_vehiculo_1' => '1.3',
         'tasa_vehiculo_2' => '1.2',
         'tasa_vehiculo_3' => '1.1',
+        'tasa_plan_credito' => '1.3',
         'monto_max_libre_inversion' => '5269451',
         'monto_max_vivienda' => '181705200',
         'monto_max_vehiculo' => '45426300',
+        'monto_max_plan_credito' => '45426300',
     ];
     /**
      * Language Option
