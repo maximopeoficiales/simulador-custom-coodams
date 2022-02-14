@@ -86,6 +86,7 @@
         <li><b>1</b>: Solo mostrara Libre Inversion Especial</li>
         <li><b>2</b>: Solo mostrara Vivienda</li>
         <li><b>3</b>: Solo mostrara Vehiculo</li>
+        <li><b>4</b>: Solo mostrara Plan de Credito</li>
     </ul>
     <p>Ejm: Si solo quieres mostrar en determinada pagina el simulador solo con <b>Libre Inversion Especial</b> deberias
         ingresar el shortcode de esta manera <b>[simulador_custom show_only=1]</b></p>
