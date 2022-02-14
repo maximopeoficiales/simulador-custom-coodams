@@ -1,6 +1,6 @@
 <h2>Tasas de Interes segun Categoria <?php echo e(get_option('libre_inversion')); ?></h2>
 <form action="" method="post">
-
+33
     <input type="hidden" name="updateOptionsSimulador" value="1">
     <div class="form-check">
         <label class="form-check-label">

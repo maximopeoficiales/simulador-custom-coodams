@@ -2,8 +2,6 @@
 
 namespace GKLSMP;
 
-use stdClass;
-
 class AdminController
 {
 
@@ -22,14 +20,17 @@ class AdminController
         update_option('tasa_vehiculo_1', $_POST['tasa_vehiculo_1']);
         update_option('tasa_vehiculo_2', $_POST['tasa_vehiculo_2']);
         update_option('tasa_vehiculo_3', $_POST['tasa_vehiculo_3']);
+        update_option('tasa_plan_credito', $_POST['tasa_plan_credito']);
         // check de valores
         update_option('sim_vehiculo', $_POST['sim_vehiculo'] ?? 0);
         update_option('sim_vivienda', $_POST['sim_vivienda'] ?? 0);
         update_option('sim_libre_inversion', $_POST['sim_libre_inversion'] ?? 0);
+        update_option('sim_plan_credito', $_POST['sim_plan_credito'] ?? 0);
 
         update_option('monto_max_libre_inversion', $_POST['monto_max_libre_inversion'] ?? 0);
         update_option('monto_max_vivienda', $_POST['monto_max_vivienda'] ?? 0);
         update_option('monto_max_vehiculo', $_POST['monto_max_vehiculo'] ?? 0);
+        update_option('monto_max_plan_credito', $_POST['monto_max_plan_credito'] ?? 0);
     }
 
 
