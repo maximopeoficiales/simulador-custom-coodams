@@ -10,7 +10,11 @@ class AdminController
     }
     public static function index()
     {
-        echo view('adminPage', ['name' => 'John Doe']);
+        try {
+            require pathView('adminPage.php');
+        } catch (\Throwable $th) {
+            print_r($th);
+        }
     }
 
     public static function saveOptions()
