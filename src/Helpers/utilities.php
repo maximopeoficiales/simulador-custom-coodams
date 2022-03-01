@@ -16,6 +16,10 @@ function path($path = ""): string
 {
     return plugin_dir_path(dirname(dirname(__FILE__))) . $path;
 }
+function pathView($path = ""): string
+{
+    return plugin_dir_path(dirname(dirname(__FILE__))) . "/resources/views/" . $path . ".php";
+}
 
 function assetCss(string $fileCss): string
 {

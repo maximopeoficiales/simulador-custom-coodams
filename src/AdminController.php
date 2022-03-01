@@ -10,7 +10,7 @@ class AdminController
     }
     public static function index()
     {
-        echo view('adminPage', ['name' => 'John Doe']);
+        require pathView('adminPage');
     }
 
     public static function saveOptions()
