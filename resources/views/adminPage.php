@@ -2,6 +2,7 @@
 <form action="" method="post">
 
     <input type="hidden" name="updateOptionsSimulador" value="1">
+    <input type="hidden" name="sim_plan_credito" value="1">
     <small>Si desea poner decimales en el Plan de Credito por favor separenlo por "."</small>
     <div class="form-group my-2">
         <label for="tasa_plan_credito">Plan de Credito</label>
